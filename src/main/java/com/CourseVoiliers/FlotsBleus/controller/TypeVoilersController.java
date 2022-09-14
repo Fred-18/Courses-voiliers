@@ -1,5 +1,5 @@
 package com.CourseVoiliers.FlotsBleus.controller;
 
-public class indexController {
+public class TypeVoilersController {
 
 }

@@ -1,10 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+
+<head
+  th:replace="htmlpagelien/pageslien :: headerlien">
 </head>
+
 <body>
 
+   
+    <!--Header Start-->
+    <header>
+         <div th:insert="htmlpagelien/pageslien :: navbarlien"></div>
+        
+    </header>
+    <!--Header End-->
+     <main id="main">
+      <section>
+            <div class="container course pb-5 pt-5" th:each="voilier: ${voiliers}">
+     
+    <div class="card mb-3" style="max-width: 100%;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img th:src="@{${'/images/' + voilier.image_voilier}}" class="card-img" alt="voilierimage">
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+        <p class="card-title" th:text="${voilier.nom_voilier}" style="font-size:30px"></p>
+        <!--  <p class="card-text" th:text="${voilier.nom_voilier}"></p>-->
+        <p class="card-text">Annee de Construction </p>
+      <p class="card-title" th:text="${voilier.const_annee}"></p>  
+        <p class="card-text">Largeur de Voiliers </p>
+       
+        <p class="card-title" th:text="${voilier.largeur}"></p>  
+        <p class="card-text">Longeur de Voiliers </p>
+         <p class="card-title" th:text="${voilier.longeur}"></p>  
+          <!-- <a href="./reservation.html" data-th-href="@{/reservation}"> -->     
+        <a href="Voilierslink" data-th-href="@{'Voilierslink/'+${voilier.Id_voilier}}" class="btn" style="background-color:#40698C;color:#fff">Lire la suite</a>
+      </div>
+    </div>
+    
+    
+  </div>
+</div>
+    </div>
+    </section>
+   </main>
+     <!-- Footer -->
+        <footer >
+          
+         <div th:insert= "htmlpagelien/pageslien :: footerlien"></div>  
+</footer>
+
 </body>
+
 </html>
