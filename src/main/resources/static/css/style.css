@@ -10,15 +10,13 @@ a {
   color: #40698C;
 }
 
-/*.section-title h2 {
-  text-shadow: 1px 1px 2px #4444;
-}*/
+
 /*****************************
     NavBar
 ******************************/
 header nav {
    background-color:#49ADBA ;
- /*box-shadow: 0px 0px 5px #4444;*/
+ 
 }
 #title{
 	text-color:#ffffff;
@@ -35,16 +33,7 @@ header nav ul.navbar-nav .nav-item .nav-link {
   border:1px solid black;
   
 }
-
-
-header nav a.nav-link active {
-	
-	background:#F4A261;
-
-	}
-	
-
-.navbar-toggler {
+/*.navbar-toggler {
   outline: none!important;
   outline-color: transparent!important;
   padding: none!important;
@@ -55,7 +44,7 @@ header nav a.nav-link active {
 
 @media(max-width: 567px){
   
-}
+}*/
 /*****************************
     Login Form
 ******************************/
@@ -180,13 +169,13 @@ header nav a.nav-link active {
   margin-bottom: 0;
 }
 
-.about .video-box {
+/*.about .video-box {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 400px;
   position: relative;
-}
+}*/
 
 
 

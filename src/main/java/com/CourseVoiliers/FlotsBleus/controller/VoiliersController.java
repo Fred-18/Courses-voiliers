@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.CourseVoiliers.FlotsBleus.service.TypeVoilersService;
+import com.CourseVoiliers.FlotsBleus.service.TypeVoiliersService;
 import com.CourseVoiliers.FlotsBleus.service.VoiliersService;
 
 
@@ -27,6 +27,13 @@ public class VoiliersController {
 		return "publicTemplates/Voiliers";
 	}
 	
+	@GetMapping("/admin/DashboardVoilier")
+	public String adminvoiliers( Model model)
+	{
+		
+		model.addAttribute("voiliers",vs.getAllVoiliers());
+		return "adminTemplates/DashboardVoilier";
+	}
 	@GetMapping("/Voilierslink/{id}")
 	public String voiliersId(@PathVariable Integer id,Model model)
 	{
@@ -35,7 +42,7 @@ public class VoiliersController {
 		return "publicTemplates/Voilierslink";
 	}
 	@Autowired
-	private TypeVoilersService tvs;
+	private TypeVoiliersService tvs;
 	
 	@GetMapping({"/","index"})
 	public String Type_Voilers(Model model)
