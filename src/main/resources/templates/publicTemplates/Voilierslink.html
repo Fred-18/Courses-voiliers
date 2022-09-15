@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+
+<head
+  th:replace="htmlpagelien/pageslien :: headerlien">
+</head>
+
+<body>
+
+   
+    <!--Header Start-->
+    <header>
+         
+        <div th:insert="htmlpagelien/pageslien :: navbarlien"></div>
+    </header>
+    <!--Header End th:each="voilier: ${voiliers}-->
+<main id="main">
+  <div class="container course pb-5 pt-5">
+  <input type="button" value="Avant" onclick="history.back()" style="background-color:#40698C; width:80px;color:#fff">
+ 
+    <section id="about" class="about mt-5">
+             <div class="container-fluid" th:each="voilier: ${voiliers}">
+                 
+                <div class="row  pt-5 pb-5" >
+
+                    <div class="col-lg-5 align-items-stretch video-box ">
+                    <img th:src="@{${'/images/'+ voilier.image_voilier}}" class="card-img" alt="voilierimage">
+                       
+                    </div>
+
+                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+<!-- 'Voilierslink/ <hr/>'+-->
+                        <div class="content">
+           <table>
+                <thead>
+                    <tr style="font:Roboto" height="100%">
+                        <th>Nom de Voilier</th>
+                        <th>Annee de Construction</th>
+                        <th>Largeur de Voiliers</th>
+                        <th>Longeur de Voiliers</th>
+                        <th>Nombre de Victoire</th>
+                    </tr>
+                   
+                </thead>
+                
+                <tbody>
+                    <tr >
+                     
+                        <td th:text="${voilier.nom_voilier}" ></td>
+                        <td th:text="${voilier.const_annee}"></td>
+                        <td th:text="${voilier.largeur}"></td>
+                       <td th:text="${voilier.longeur}"></td>
+                       <td th:text="${voilier.nb_victoire}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    </div>
+   </main> 
+     <!-- Footer -->
+        <footer >
+          <div th:insert= "htmlpagelien/pageslien :: footerlien"></div>
+           </footer>
+</body>
+
+</html>
