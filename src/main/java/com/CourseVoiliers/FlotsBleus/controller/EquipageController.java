@@ -24,8 +24,6 @@ public class EquipageController {
 	public String getequipage(@RequestParam int id, Model model){
 		model.addAttribute("equipage", es.getequipage(id).get());
 		model.addAttribute("equipages", es.getEquipages());
-		
-		
 		return "publicTemplates/equipage";
 	
 		

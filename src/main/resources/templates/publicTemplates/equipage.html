@@ -45,8 +45,8 @@
             <h2>Nom des Equipes :</h2>
             <!-- <h3 th:text="${equipage.nom}"></h3> -->
             <select class="form-select form-select w-25 " aria-label="Sélectioner une Equipe">
-                <option selected></option>
-                <option th:each="values:${equipages}" th:text="${values.nom}" th href="${equipage.nom}"></option>
+                <option selected>Select team</option>
+                <option th:each="values:${equipages}" th:text="${values.nom}" th href="${equipage}"></option>
 
 
             </select>

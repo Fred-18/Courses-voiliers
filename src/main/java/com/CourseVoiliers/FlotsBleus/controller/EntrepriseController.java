@@ -1,4 +1,4 @@
-package com.CourseVoiliers.FlotsBleus;controller;
+package com.CourseVoiliers.FlotsBleus.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
